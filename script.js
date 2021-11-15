@@ -39,9 +39,9 @@ let respoMessage = document.querySelector('#responce');
 let rightScore = 0;
 let wrongScore = 0;
 
+quizQuestions();
 
 answerBank.addEventListener('click',function(event){
-    quizQuestions();
     let selectedAnswer = event.target;
     let answerId = selectedAnswer.getAttribute('id');
     // console.log(selectedAnswer);
@@ -60,6 +60,7 @@ answerBank.addEventListener('click',function(event){
     console.log(`wrong score: ${wrongScore}`);
     
     questionNumber++;
+    quizQuestions();
     //display message function
     
 })
@@ -68,23 +69,23 @@ answerBank.addEventListener('click',function(event){
 //check what answer was clicked.
 //log point
 // answerBank.addEventListener('click',function(event){
-// let judge = event.target;
-// console.log(judge);
-
-// })
-
-
-function quizQuestions(){
+    // let judge = event.target;
+    // console.log(judge);
+    
+    // })
+    
+    
+    function quizQuestions(){
     //timer starts
         //if timer runs out "you lose", moved to next page with score.
     //question with answers displayed.
     // when answer is clicked(eventlistener), selected is compared to correct answer and prompt is displayed.
         //point added to score if correct.
             //moves to next question
-      question.textContent = JSON.stringify(questionArray[questionNumber].question);
-      answer1.textContent = JSON.stringify(questionArray[questionNumber].answer1);
-      answer2.textContent = JSON.stringify(questionArray[questionNumber].answer2);
-      answer3.textContent = JSON.stringify(questionArray[questionNumber].answer3);
-      answer4.textContent = JSON.stringify(questionArray[questionNumber].answer4);
+      question.textContent = questionArray[questionNumber].question;
+      answer1.textContent = questionArray[questionNumber].answer1;
+      answer2.textContent = questionArray[questionNumber].answer2;
+      answer3.textContent = questionArray[questionNumber].answer3;
+      answer4.textContent = questionArray[questionNumber].answer4;
     
 }
