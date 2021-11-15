@@ -1,0 +1,32 @@
+#main-field {
+    margin: 0 auto;
+    /* background-color: aquamarine; */
+    width: 45vw;
+}
+
+li {
+    background-color: purple;
+    width: fit-content;
+    color: white;
+    list-style:nu;
+    
+}
+
+ul {
+    background-color: red;
+}
+
+#timer {
+    position: absolute;
+    right: 5px;
+}
+
+#answer-bank {
+    display:flex;
+    flex-direction: column;
+}
+
+button {
+    text-align: left;
+    margin: 5px 0px 5px 0px;
+}
