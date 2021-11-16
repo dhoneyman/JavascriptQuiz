@@ -42,9 +42,14 @@ let rightScore = 0;
 let wrongScore = 0;
 let timeInterval;
 let timeLeft;
+let scoreLi = document.createElement('li');
+let scoreUl = document.querySelector('high-score-ul');
+let newHighScore = document.querySelector('newScore')
 
 quizQuestions();
 countdown();
+// scorePage();
+
 
 answerBank.addEventListener('click',function(event){
     let selectedAnswer = event.target;
@@ -71,6 +76,8 @@ answerBank.addEventListener('click',function(event){
     
     questionNumber++;
     quizQuestions();
+    // localStorage.setItem('rightScore', rightScore);
+
     //display message function
     
 })
@@ -117,3 +124,19 @@ function countdown() {
       console.log(questionArray.length);
     
 }
+
+
+
+
+function scorePage (){
+    newHighScore.textContent = rightScore;
+    localStorage.setItem('rightScore', rightScore);
+
+
+}
+// function renderHighScores () {
+//     scoreUl.innerHTML = '';
+
+//     for(var i=0; i < highScoreCount.length)
+
+// }
