@@ -34,27 +34,37 @@ let answer2 = document.querySelector('#ans-two');
 let answer3 = document.querySelector('#ans-three');
 let answer4 = document.querySelector('#ans-four');
 let answerBank = document.querySelector('#answer-bank');
+let mainField = document.querySelector('#main-field');
 let questionNumber = 0;
 let respoMessage = document.querySelector('#responce');
+let timerEl = document.querySelector('#time-left');
 let rightScore = 0;
 let wrongScore = 0;
+let timeInterval;
+let timeLeft;
 
 quizQuestions();
+countdown();
 
 answerBank.addEventListener('click',function(event){
     let selectedAnswer = event.target;
     let answerId = selectedAnswer.getAttribute('id');
     // console.log(selectedAnswer);
-    console.log(questionNumber);
-    console.log(answerId);
-    console.log(questionArray[questionNumber].answerCorrect);
+    // console.log(questionNumber);
+    // console.log(answerId);
+    // console.log(questionArray[questionNumber].answerCorrect);
     
+    if(questionNumber === questionArray.length-1){
+      window.location.href = 'highScore.html';
+    }
     
     if (questionArray[questionNumber].answerCorrect === answerId){
         rightScore ++;
         respoMessage.textContent = "right!";
     } else {
         wrongScore ++;
+        timeLeft -= 10;
+
     }
     console.log(`right score ${rightScore}`);
     console.log(`wrong score: ${wrongScore}`);
@@ -64,6 +74,20 @@ answerBank.addEventListener('click',function(event){
     //display message function
     
 })
+
+function countdown() {
+    timeLeft = 30;
+    timeInterval = setInterval(function() {
+        if (timeLeft > 0) {
+            timerEl.textContent = timeLeft;
+            timeLeft--;
+        } else {
+            timerEl.textContent = 'NO MORE TIME!'
+            mainField.textContent = 'All Done!'
+            window.location.href = 'highScore.html';
+        }
+    },1000);
+}
 //add event listener
 //starty quiz question,
 //check what answer was clicked.
@@ -87,5 +111,9 @@ answerBank.addEventListener('click',function(event){
       answer2.textContent = questionArray[questionNumber].answer2;
       answer3.textContent = questionArray[questionNumber].answer3;
       answer4.textContent = questionArray[questionNumber].answer4;
+
+
+      console.log(questionNumber);
+      console.log(questionArray.length);
     
 }
