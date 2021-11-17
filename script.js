@@ -47,46 +47,41 @@ let timeLeft;
 
 quizQuestions();
 countdown();
-// scorePage();
+
 
 
 answerBank.addEventListener('click',function(event){
     let selectedAnswer = event.target;
     let answerId = selectedAnswer.getAttribute('id');
-    // console.log(selectedAnswer);
-    // console.log(questionNumber);
-    // console.log(answerId);
-    // console.log(questionArray[questionNumber].answerCorrect);
+
     
-    if(questionNumber === questionArray.length-1){
-      window.location.href = 'highScore.html';
-    }
     
     if (questionArray[questionNumber].answerCorrect === answerId){
         rightScore ++;
         respoMessage.textContent = "right!";
         setTimeout(function(){
             respoMessage.textContent = '';}, 1500);
-    } else {
-        wrongScore ++;
-        timeLeft -= 10;
-        respoMessage.textContent = 'wrong!'
-        setTimeout(function(){
-            respoMessage.textContent = '';}, 1500);
-        
-    }
-    console.log(`right score ${rightScore}`);
-    console.log(`wrong score: ${wrongScore}`);
-    
-    questionNumber++;
-    quizQuestions();
-    // localStorage.setItem('rightScore', rightScore);
-
-    //display message function
-    localStorage.setItem('rightScore', rightScore);
-    console.log(rightScore);
-
-    
+        } else {
+            wrongScore ++;
+            timeLeft -= 10;
+            respoMessage.textContent = 'wrong!'
+            setTimeout(function(){
+                respoMessage.textContent = '';}, 1500);
+                
+            }
+            console.log(`right score ${rightScore}`);
+            console.log(`wrong score: ${wrongScore}`);
+            
+            questionNumber++;
+            
+            localStorage.setItem('rightScore', rightScore);
+            console.log(rightScore);
+            
+            if(questionNumber === questionArray.length){
+                window.location.href = 'highScore.html';
+            }
+            
+            quizQuestions();
 })
 
 
@@ -126,18 +121,5 @@ function countdown() {
       answer2.textContent = questionArray[questionNumber].answer2;
       answer3.textContent = questionArray[questionNumber].answer3;
       answer4.textContent = questionArray[questionNumber].answer4;
-
-
-      console.log(questionNumber);
-      console.log(questionArray.length);
     
 }
-
-
-
-// function renderHighScores () {
-//     scoreUl.innerHTML = '';
-
-//     for(var i=0; i < highScoreCount.length)
-
-// }
