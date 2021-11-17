@@ -15,3 +15,7 @@ https://dhoneyman.github.io/JavascriptQuiz/
 
 ## Mock-Up
 
+![start page for the quiz](Assets/images/start.png)
+![question number one](Assets/images/num1.png)
+![page where your score is presented and player can enter name](Assets/images/enterName.png)
+![screen after submitting score](Assets/images/Highscore.png)
