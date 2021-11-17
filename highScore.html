@@ -6,23 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>High Scores!!!</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="Assets/css/styles.css">
 
 </head>
 <body>
     <main>
     
-    <ul id='high-score-ul'><h1>high scores!</h1>
+    <ul id='high-score-ul'><h1>High Scores!</h1>
         <form> Your high score: <span id= 'newScore'></span>
             <input type='text' placeholder="enter name!" id="playerName"></input>
             <input type='submit' id='submit'></input></form>
             <li></li>
         </ul>
+        <div id='player-array'>
+            <script>
+                let playerArray = [];
+            </script>
+        </div>
+
+        
         <a href="landingPage.html">
         <button id='rePlay'>Play again?</button></a>
     </main>
         
-        <script src='highScoreScript.js'></script>
+        <script src='Assets/js/highScoreScript.js'></script>
     <!-- play again button -->
     
 </body>
