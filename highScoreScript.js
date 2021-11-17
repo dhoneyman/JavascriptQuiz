@@ -3,6 +3,7 @@ let scoreUl = document.querySelector('#high-score-ul');
 let newHighScore = document.querySelector('#newScore')
 let submitButton = document.querySelector('#submit');
 
+newHighScore.textContent = localStorage.getItem('rightScore');
 
 submitButton.addEventListener('click', function(event){
 

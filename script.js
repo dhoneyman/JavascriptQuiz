@@ -1,9 +1,9 @@
 let questionArray = [{
-    question: 'this is question 1',
-    answer1: 'this is a possible answer1',
-    answer2: 'this is also a possible answer1',
-    answer3: 'this too can be an answer1',
-    answer4: 'this is also an answer1',
+    question: 'In 1997, what legendary American climber had the first ascent of Necesarry Evil located in the Virgin River Gorge of St George Utah?',
+    answer1: 'Chris Sharma',
+    answer2: 'Boone Speed',
+    answer3: 'Dave Graham',
+    answer4: 'Alex Honnold',
     answerCorrect: 'ans-one'
 }, {
     question: 'this is question 2',
@@ -83,6 +83,9 @@ answerBank.addEventListener('click',function(event){
     // localStorage.setItem('rightScore', rightScore);
 
     //display message function
+    localStorage.setItem('rightScore', rightScore);
+    console.log(rightScore);
+
     
 })
 
