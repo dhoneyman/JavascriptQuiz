@@ -36,3 +36,7 @@ h2 {
     width: 15%;
     margin-top: 25vh;
 }
+
+li {
+    list-style:none;
+}

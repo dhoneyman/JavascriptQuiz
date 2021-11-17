@@ -6,25 +6,25 @@ let questionArray = [{
     answer4: 'Alex Honnold',
     answerCorrect: 'ans-one'
 }, {
-    question: 'this is question 2',
-    answer1: 'this is a possible answer2',
-    answer2: 'this is also a possible answer2',
-    answer3: 'this too can be an answer2',
-    answer4: 'this is also an answer2',
+    question: 'Which female rock climber was the first to climb the grade of 5.15a?',
+    answer1: 'Lynn Hill',
+    answer2: 'Margo Hayes',
+    answer3: 'Jule Wirm',
+    answer4: 'Shauna Coxsey',
     answerCorrect: 'ans-two'
 }, {
-    question: 'this is question 3',
-    answer1: 'this is a possible answer3',
-    answer2: 'this is also a possible answer3',
-    answer3: 'this too can be an answer3',
-    answer4: 'this is also an answer3',
+    question: 'Established in 2001 by legendary climber Chris Sharma, what was the worlds first ascent of a 5.15a?',
+    answer1: 'Crimp Scampi',
+    answer2: 'Easy Rider',
+    answer3: 'Biographie',
+    answer4: 'Bibliographie',
     answerCorrect: 'ans-three'
 }, {
-    question: 'this is question 4',
-    answer1: 'this is a possible answer4',
-    answer2: 'this is also a possible answer4',
-    answer3: 'this too can be an answer4',
-    answer4: 'this is also an answer4',
+    question: 'Where was the first sport route in the US located?',
+    answer1: 'Reimers Ranch',
+    answer2: 'Ceuse',
+    answer3: 'Miguels Pizza',
+    answer4: 'Smith Rock',
     answerCorrect: 'ans-four'
 }];
 
