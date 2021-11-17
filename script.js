@@ -42,9 +42,8 @@ let rightScore = 0;
 let wrongScore = 0;
 let timeInterval;
 let timeLeft;
-let scoreLi = document.createElement('li');
-let scoreUl = document.querySelector('high-score-ul');
-let newHighScore = document.querySelector('newScore')
+
+
 
 quizQuestions();
 countdown();
@@ -66,10 +65,15 @@ answerBank.addEventListener('click',function(event){
     if (questionArray[questionNumber].answerCorrect === answerId){
         rightScore ++;
         respoMessage.textContent = "right!";
+        setTimeout(function(){
+            respoMessage.textContent = '';}, 1500);
     } else {
         wrongScore ++;
         timeLeft -= 10;
-
+        respoMessage.textContent = 'wrong!'
+        setTimeout(function(){
+            respoMessage.textContent = '';}, 1500);
+        
     }
     console.log(`right score ${rightScore}`);
     console.log(`wrong score: ${wrongScore}`);
@@ -81,6 +85,7 @@ answerBank.addEventListener('click',function(event){
     //display message function
     
 })
+
 
 function countdown() {
     timeLeft = 30;
@@ -127,13 +132,6 @@ function countdown() {
 
 
 
-
-function scorePage (){
-    newHighScore.textContent = rightScore;
-    localStorage.setItem('rightScore', rightScore);
-
-
-}
 // function renderHighScores () {
 //     scoreUl.innerHTML = '';
 
